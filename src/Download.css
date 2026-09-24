@@ -380,6 +380,10 @@
   color: #d6b36a;
 }
 
+.mr {
+    padding-top: 10px;
+}
+
 /* MOBILE */
 
 @media (max-width: 600px) {

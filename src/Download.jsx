@@ -109,7 +109,8 @@ function Download() {
 
         <div className="download-line" />
 
-        <h1>BLACK MYTH: WUKONG</h1>
+        <h1>BLACK MYTH:</h1>
+        <h1 className="mr">WUKONG</h1>
 
         <p className="download-description">
           Tải game và trải nghiệm hành trình huyền bí của Thiên Mệnh Nhân.

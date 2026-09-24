@@ -7,7 +7,7 @@ import Download from "./Download";
 ========================================================= */
 
 const images = [
-  "/images/games/wukong-1.jpeg",
+  "/images/games/wukong-1.jpg",
   "/images/games/wukong-2.jpeg",
   "/images/games/wukong-3.jpg",
   "/images/games/wukong-4.jpeg",
