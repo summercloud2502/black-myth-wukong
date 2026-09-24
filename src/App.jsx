@@ -221,7 +221,7 @@ function App() {
 
               <span>RPG</span>
 
-              <span>PC</span>
+              <span>IOS</span>
 
               <span>VIỆT HÓA</span>
             </div>
