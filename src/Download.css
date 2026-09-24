@@ -1,0 +1,403 @@
+.download-page {
+  position: fixed;
+  inset: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  background: #080808;
+  color: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.download-content {
+  width: 100%;
+  max-width: 650px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+.download-logo {
+  font-size: 46px;
+  font-weight: 900;
+  letter-spacing: 8px;
+  color: #d6b36a;
+}
+
+.download-subtitle {
+  margin-top: 5px;
+  font-size: 13px;
+  letter-spacing: 5px;
+  color: #999;
+}
+
+.download-line {
+  width: 80px;
+  height: 2px;
+  margin: 25px 0;
+  background: #d6b36a;
+}
+
+.download-content h1 {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+.download-description {
+  max-width: 500px;
+  margin: 15px 0 30px;
+  color: #aaa;
+  line-height: 1.6;
+}
+
+/* =========================
+   CARD RIÊNG CỦA TRANG DOWNLOAD
+========================= */
+
+.download-page-card {
+  width: 100%;
+  max-width: 500px;
+
+  padding: 35px 30px;
+
+  background: #111;
+  border: 1px solid #292929;
+  border-radius: 8px;
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+
+  text-align: center;
+}
+
+.download-card-icon {
+  font-size: 42px;
+  color: #d6b36a;
+}
+
+.download-page-card h2 {
+  margin: 10px 0;
+
+  font-size: 26px;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+.download-page-card p {
+  margin: 0 0 25px;
+
+  color: #999;
+  line-height: 1.6;
+}
+
+/* =========================
+   DOWNLOAD BUTTONS
+========================= */
+
+.download-buttons {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.download-button,
+.support-button {
+  flex: 1;
+  padding: 15px;
+
+  border-radius: 4px;
+
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+/* TẢI XUỐNG */
+
+.download-button {
+  border: none;
+
+  background: #d6b36a;
+  color: #111;
+}
+
+.download-button:hover {
+  background: #f0c26e;
+  transform: translateY(-2px);
+}
+
+/* CSKH */
+
+.support-button {
+  border: 1px solid #d6b36a;
+
+  background: transparent;
+  color: #d6b36a;
+}
+
+.support-button:hover {
+  background: #d6b36a;
+  color: #111;
+  transform: translateY(-2px);
+}
+
+.download-info {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+
+  margin-top: 20px;
+
+  color: #666;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.back-button {
+  margin-top: 25px;
+
+  padding: 10px 20px;
+
+  background: transparent;
+  border: 1px solid #333;
+  border-radius: 4px;
+
+  color: #888;
+
+  cursor: pointer;
+}
+
+.back-button:hover {
+  border-color: #d6b36a;
+  color: #d6b36a;
+}
+
+/* =========================================================
+   DOWNLOAD LOADING MODAL
+========================================================= */
+
+.download-loading-overlay {
+  position: fixed;
+  inset: 0;
+
+  z-index: 9999;
+
+  background: rgba(0, 0, 0, 0.88);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+}
+
+.download-loading-modal {
+  width: 100%;
+  max-width: 600px;
+
+  padding: 45px 40px;
+
+  background: #111;
+
+  border: 1px solid #5b4728;
+
+  box-shadow:
+    0 30px 100px rgba(0, 0, 0, 0.8);
+
+  text-align: center;
+}
+
+.loading-logo {
+  color: #d6b36a;
+
+  font-size: 28px;
+  font-weight: 900;
+
+  letter-spacing: 7px;
+}
+
+.download-loading-modal h2 {
+  margin-top: 25px;
+
+  color: #fff;
+
+  font-size: 25px;
+  letter-spacing: 2px;
+}
+
+.loading-game-name {
+  margin-top: 8px;
+
+  color: #777;
+
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.loading-size {
+  margin-top: 35px;
+
+  color: #d6b36a;
+
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.loading-size span {
+  color: #666;
+
+  font-size: 15px;
+  font-weight: normal;
+}
+
+/* THANH PROGRESS */
+
+.loading-progress {
+  width: 100%;
+  height: 12px;
+
+  margin-top: 25px;
+
+  background: #292929;
+
+  border-radius: 2px;
+
+  overflow: hidden;
+}
+
+.loading-progress-bar {
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    #9d7335,
+    #d6b36a,
+    #f0c26e
+  );
+
+  transition: width 1s linear;
+}
+
+.loading-percent {
+  margin-top: 12px;
+
+  color: #aaa;
+
+  font-size: 14px;
+}
+
+/* THÔNG TIN */
+
+.loading-details {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-top: 30px;
+
+  padding-top: 20px;
+
+  border-top: 1px solid #292929;
+}
+
+.loading-details span {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+
+  color: #666;
+
+  font-size: 9px;
+
+  letter-spacing: 1px;
+}
+
+.loading-details strong {
+  color: #aaa;
+
+  font-size: 13px;
+
+  font-weight: 400;
+
+  letter-spacing: 0;
+}
+
+/* HOÀN TẤT */
+
+.download-complete {
+  margin-top: 25px;
+
+  padding: 13px;
+
+  border: 1px solid #5b4728;
+
+  color: #d6b36a;
+
+  font-size: 13px;
+
+  letter-spacing: 1px;
+}
+
+/* HỦY */
+
+.cancel-download {
+  margin-top: 30px;
+
+  padding: 10px 25px;
+
+  background: transparent;
+
+  border: 1px solid #444;
+
+  color: #777;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.cancel-download:hover {
+  border-color: #d6b36a;
+
+  color: #d6b36a;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .download-loading-modal {
+    padding: 30px 20px;
+  }
+
+  .loading-size {
+    font-size: 24px;
+  }
+
+  .loading-details {
+    gap: 10px;
+  }
+
+  .loading-details strong {
+    font-size: 11px;
+  }
+
+}

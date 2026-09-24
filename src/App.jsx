@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import Download from "./Download";
 
 /* =========================================================
    ẢNH GAME
@@ -47,7 +48,7 @@ const relatedGames = [
 
 function App() {
   const [current, setCurrent] = useState(0);
-  const [modal, setModal] = useState(false);
+  const [page, setPage] = useState("home");
 
   /* =========================
      CHUYỂN ẢNH
@@ -67,9 +68,16 @@ function App() {
     });
   };
 
+  const goToDownload = () => {
+    setPage("download");
+  };
+
   /* =========================
      KIỂM TRA ẢNH
   ========================= */
+  if (page === "download") {
+    return <Download />;
+  }
 
   if (!images.length) {
     return (
@@ -117,7 +125,7 @@ function App() {
 
           {/* DOWNLOAD */}
 
-          <button className="header-download" onClick={() => setModal(true)}>
+          <button className="header-download" onClick={goToDownload}>
             TẢI GAME
           </button>
         </div>
@@ -203,7 +211,7 @@ function App() {
 
             <button
               className="download-game-btn"
-              onClick={() => setModal(true)}
+              onClick={goToDownload}
             >
               ↓ &nbsp; TẢI GAME NGAY
             </button>
@@ -343,7 +351,7 @@ function App() {
 
               <p>Tải game để chơi và cập nhật bản Việt hóa.</p>
 
-              <button onClick={() => setModal(true)}>TẢI GAME</button>
+              <button onClick={goToDownload}>TẢI GAME</button>
             </div>
           </aside>
         </div>
@@ -423,31 +431,9 @@ function App() {
             <p>GAME VIỆT HÓA</p>
           </div>
 
-          <div>© 2026 Mythic Game Việt Hóa</div>
+          <div>© 2025 Mythic Game Việt Hóa</div>
         </div>
       </footer>
-
-      {/* =================================================
-          MODAL DOWNLOAD
-      ================================================= */}
-
-      {modal && (
-        <div className="modal-background" onClick={() => setModal(false)}>
-          <div className="download-modal" onClick={(e) => e.stopPropagation()}>
-            <button className="close-modal" onClick={() => setModal(false)}>
-              ×
-            </button>
-
-            <div className="modal-icon">↓</div>
-
-            <h2>TẢI GAME</h2>
-
-            <p>Cánh cửa để tải và quản lý bản Việt hóa của bạn.</p>
-
-            <button className="modal-download">TẢI XUỐNG</button>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
